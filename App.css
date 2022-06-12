@@ -1,0 +1,224 @@
+/* globals */
+:root {
+    --clr-primary: #2F2D2E;
+    --clr-lemon: #DAEDBD;
+    --clr-orange: #DC965A;
+    --clr-blue: #7DBBC3;
+
+    --clr-undertone-lemon: #A9B597;
+    --clr-undertone-orange: #C08450;
+    --clr-undertone-blue: #73A8AE;
+
+    --clr-button: #48B1DE;
+}
+
+body {
+    background-color: var(--clr-primary);
+}
+
+/* composition */
+
+.linear-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-3 {
+    display: grid;
+    width: 650px;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+    display: grid;
+    width: 500px;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gameboard {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.gameboard-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* not conforming to CUBE CSS*/
+    width: var(--gameboard-cell, 200px);
+    height: var(--gameboard-cell, 200px);
+}
+
+/* utility */
+
+.total-width {
+    width: 100%;
+}
+
+.mg-top-menu {
+    margin-top: 20rem;
+}
+
+.mg-top {
+    margin-top: 15rem;
+}
+
+.mg-top-small {
+    margin-top: 2rem;
+} 
+
+.mg-top-header {
+    margin-top: 2rem;
+}
+
+.mg-left {
+    margin-left: 50rem;
+}
+
+.mg-top-gameboard {
+    margin-top: 6rem;
+}
+
+.content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.white-font {
+    color: white;
+}
+
+.primary-bg {
+    background-color: var(--clr-primary);
+}
+
+.label-font {
+    font-size: 1.4rem;
+}
+
+.label-margin {
+    margin-bottom: 5px;
+}
+
+/* block */
+
+.menu-btn {
+    cursor: pointer;
+    height: var(--btn-height, 100px);
+    width: 100%;
+    border-radius: 8px;
+    border-color: var(--clr-undertone, black);
+    border-width: 0px 0px 5px 0px;
+    font-size: var(--font-size, 1.8rem);
+}
+
+.input-bar {
+    width: 400px;
+    height: 50px;
+    border-color: transparent;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    outline-width: 0px;
+}
+
+.button {
+    cursor: pointer;
+    background-color: var(--clr-button);
+    color: white;
+    border-width: 0px;
+    border-radius: 40px;
+    width: 120px;
+    height: 40px;
+}
+
+.card {
+    background-color: white;
+    height: 220px;
+    border-radius: 8px;
+}
+
+.card-content {
+    margin-top: 10px;
+}
+
+.card-content>* {
+    margin-bottom: 3rem;
+}
+
+.card-img {
+    width: 210px;
+    height: 90px;
+    border-radius: 8px;
+    font-size: var(--font-size, 1.8rem);
+    border: solid var(--clr-undertone, black);
+    border-width: 0px 0px 5px 0px;
+}
+
+.gameboard-cell-img {
+    width: var(--gameboard-cell, 200px);
+    height: var(--gameboard-cell, 200px);
+}
+
+/* exceptions */
+
+img[data-img="logo"] {
+    height: 100px;
+    width: 220px;
+}
+
+a[data-img="o-player"] {
+    display: block;
+    width: var(--gameboard-cell, 150px);
+    height: var(--gameboard-cell, 150px);
+    background: url(./Assets/O-Player.svg);
+    background-size: 150px 150px;
+}
+
+a[data-img="x-player"] {
+    display: block;
+    width: var(--gameboard-cell, 150px);
+    height: var(--gameboard-cell, 150px);
+    background: url(./Assets/X-Player.svg);
+    background-size: 150px 150px;
+}
+
+/* animations (look into CUBE docs */
+/* I am not sure where to put animations for CUBE (maybe as a block, since it deals with the state of it) */
+.win-animation {
+    animation: 1s ease slideIn;
+    animation-delay: calc(var(--order) * 200ms);
+}
+
+@keyframes slideIn {
+   0% {
+       margin-bottom: 0%;
+   } 
+
+   50%, 75% {
+       margin-bottom: 60%;
+   }
+
+   80% {
+       margin-bottom: 0%;
+   }
+
+   90% {
+        margin-bottom: 20%;
+   }
+
+   100% {
+       margin-bottom: 0%;
+   }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./App.css"></link>
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body class="[ linear-layout ]">
+
+    <div class="[ mg-top-header ]"><img data-img="logo" src="./Assets/Logo.png" alt=""></div>
+
+    <form id="form" class="[ grid-2 ] [ mg-top ]">
+        <div class="[ card ]">
+            <div class="[ card-content ] [ linear-layout ]">
+                <div class="[ card-img ] [ content-center ]"
+                    style="background-color: var(--clr-blue); --clr-undertone: var(--clr-undertone-blue)">
+                    X
+                </div>
+                <button name="startingPlayer" value="x-player" class="[ button ]">Select</button>
+            </div>
+        </div>
+        <div class="[ card ]">
+            <div class="[ card-content ] [ linear-layout ]">
+                <div class="[ card-img ] [ content-center ]"
+                    style="background-color: var(--clr-orange); --clr-undertone: var(--clr-undertone-orange);">
+                    O
+                </div>
+                <button name="startingPlayer" value="o-player" class="[ button ]">Select</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="./Scripts/saveGameMode.js"></script>
+</body>
+
+</html>
