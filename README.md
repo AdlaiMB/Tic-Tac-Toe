@@ -2,7 +2,7 @@
 
 ## Description
 
-A basic project to get more experience with designing and creating a website.
+A basic Tic-Tac-Toe project to get more experience with designing and creating a website.
 
 ---
 
@@ -35,6 +35,8 @@ they detailed; however, I may have written some CSS that may not abide by the ru
 
 ## Resources
 
+- Color Palette 
+    - Color palette generator [coolors](https://coolors.co/)
 - Styling
     - How I got an Introduction to CUBE CSS [Kevin Powell video](https://www.youtube.com/watch?v=NanhQvnvbR8&ab_channel=KevinPowell)
     - CUBE CSS [Docs](https://cube.fyi/)
